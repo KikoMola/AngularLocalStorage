@@ -11,6 +11,7 @@ import { TaskListComponentComponent } from './componentes/task-list-component/ta
 import { TaskService } from './servicios/task-service.service';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     TaskComponentComponent,
     TaskListComponentComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
+  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, ToastrModule.forRoot()],
   providers: [TaskService],
   bootstrap: [AppComponent],
 })

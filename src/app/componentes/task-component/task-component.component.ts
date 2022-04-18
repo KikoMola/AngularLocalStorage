@@ -4,6 +4,7 @@ import { Task } from '../../modelos/task';
 
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { TaskService } from '../../servicios/task-service.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-task-component',
@@ -16,13 +17,14 @@ export class TaskComponentComponent implements OnInit {
 
   faTrashAlt = faTrashAlt;
 
-  constructor(public taskService: TaskService) { }
+  constructor(public taskService: TaskService, private toastr: ToastrService) { }
 
   ngOnInit(): void {
   }
 
   deleteTask(task: Task) {
     this.taskService.deleteTask(task);
+    this.toastr.success('Task deleted successfully.', 'Success!');
   }
 
 }

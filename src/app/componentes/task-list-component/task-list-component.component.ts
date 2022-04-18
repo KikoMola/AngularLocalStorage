@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { TaskService } from '../../servicios/task-service.service';
 import { Task } from '../../modelos/task';
 
+import { ToastrService } from 'ngx-toastr';
+
 @Component({
   selector: 'app-task-list-component',
   templateUrl: './task-list-component.component.html',
@@ -17,4 +19,6 @@ export class TaskListComponentComponent implements OnInit {
   ngOnInit() {
     this.tasks = this.taskService.getTasks();
   }
+
+  
 }
