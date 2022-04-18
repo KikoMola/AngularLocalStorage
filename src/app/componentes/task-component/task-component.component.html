@@ -1,0 +1,14 @@
+<div class="card mb-2">
+    <div class="card-header d-flex justify-content-between">
+        <h2>{{ task.title }}</h2>
+        <div>
+            <button class="btn btn-danger mr-4" (click)="deleteTask(task)">
+                Delete
+                <fa-icon [icon]="faTrashAlt"></fa-icon>
+            </button>
+        </div>
+    </div>
+    <div class="card-body">
+        <h5>{{ task.description }}</h5>
+    </div>
+</div>
